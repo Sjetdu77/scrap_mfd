@@ -55,7 +55,6 @@ def index():
 		list_stats["Name"].append(" ".join(parts))
 
 	df_mfd = DataFrame.from_dict(list_stats).to_html(classes='data', header='true')
-	print(df_mfd)
 	return render_template("index.html", tables=df_mfd)
 
 
